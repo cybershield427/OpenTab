@@ -2,11 +2,11 @@
 import sys
 # importing the components
 from PySide6.QtWidgets import QApplication
-from button import ButtonHolder
+from main_window import MainWindow
 
 app = QApplication(sys.argv)
 
-window = ButtonHolder()
+window = MainWindow(app)
 window.show()
 
 # Start the event loop

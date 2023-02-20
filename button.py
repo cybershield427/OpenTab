@@ -1,10 +1,12 @@
-from PySide6.QtWidgets import QMainWindow, QPushButton
+from PySide6.QtWidgets import QPushButton, QVBoxLayout
 
 
-class ButtonHolder(QMainWindow):
-	def __init__(self):
+class ButtonHolder(QPushButton):
+	def __init__(self, name):
 		super().__init__()
-		self.setWindowTitle("OpenTab")
-		button = QPushButton("Login")
+		login_button = QPushButton(name)
+		QVBoxLayout(login_button)
+		login_button.clicked.connect(self.login_clicked)
 
-		self.setCentralWidget(button)
+	def login_clicked(self):
+		print("login button clicked")
