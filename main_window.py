@@ -21,7 +21,12 @@ class MainWindow(QMainWindow):
 
 		window_menu = menu_bar.addMenu("Window")
 		setting_menu = menu_bar.addMenu("Setting")
+
+
 		help_menu = menu_bar.addMenu("Help")
+        help_menu_action = help_menu.addAction("Help")
+        help_menu_action.triggered.connect(self.help)
+
 
 		# toolbar
 		toolbar = QToolBar("Toolbar")
@@ -30,6 +35,7 @@ class MainWindow(QMainWindow):
 
 		toolbar.addAction(close_action)
 		toolbar.addAction(add_table_action)
+        toolbar.addAction(help)
 
 		# status bar
 		self.setStatusBar(QStatusBar(self))
@@ -41,3 +47,7 @@ class MainWindow(QMainWindow):
 
 	def add_table(self):
 		self.statusBar().showMessage("To Add a New Table", 3000)
+    
+    def help(self):
+        self.statusBar().showMessage("Here to help", 3000)
+
