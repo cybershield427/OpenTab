@@ -14,7 +14,7 @@
 1. after login main window
 2. databases for user and customer
 3. authentication process
-4. create new user
+4. ...
 
 
 ### List of members
