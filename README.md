@@ -18,7 +18,10 @@
 
 
 ### List of members
-Hangbo Zhang: main frame, menu, toolbar, status bar
-Kristine Rivera:
-Josh Constantino:
+Hangbo Zhang: main frame, menu, toolbar, status bar, login window, buttons
+
+Kristine Rivera: databases for use and customer (in progress)
+
+Josh Constantino: Help button(in progress)
+
 Joshua Rio
