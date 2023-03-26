@@ -1,4 +1,6 @@
 from PySide6.QtWidgets import QWidget, QLabel, QLineEdit, QHBoxLayout, QVBoxLayout, QPushButton, QApplication
+from user_db import Database
+from table_window import TableWindow
 
 
 class LoginWindow(QWidget):
@@ -6,6 +8,11 @@ class LoginWindow(QWidget):
 		super().__init__()
 		self.setWindowTitle("Login")
 		self.setMinimumSize(256, 256)
+
+		# create a database instance
+		self.db = Database()
+		# create the user table if not exist
+		self.db.create_table()
 
 		username = QLabel("Username:")
 		self.user_edit = QLineEdit()
@@ -48,11 +55,19 @@ class LoginWindow(QWidget):
 		login_button.clicked.connect(self.login)
 		cancel_button.clicked.connect(self.close)
 
+		self.table_window = None
+
 	def login(self):
 		username = self.user_edit.text()
 		password = self.pass_edit.text()
-		if username == 'admin' and password == 'password':
+		user = self.db.get_user(username, password)
+		if user:
 			print("Login successful!")
+			self.db.close_connection()
+			QApplication.closeAllWindows()
+			app = QApplication.instance()
+			self.table_window = TableWindow(app)
+			self.table_window.show()
 			self.hide()
 		else:
 			self.message_label.setText("Invalid username or password.")
