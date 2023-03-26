@@ -22,6 +22,6 @@ Hangbo Zhang: main frame, menu, toolbar, status bar, login window, buttons
 
 Kristine Rivera: databases for use and customer (in progress)
 
-Josh Constantino: Help button(in progress)
+Josh Constantino: Creating mock data (in progress)
 
 Joshua Rio
