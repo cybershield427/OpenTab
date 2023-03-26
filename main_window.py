@@ -67,15 +67,15 @@ class MainWindow(QMainWindow):
 
 		# events for each button
 		login_button.clicked.connect(self.login_clicked)
+
 		cancel_button.clicked.connect(self.close_app)
 
 		# create new window instance so the window can keep open
 		self.new_window = None
 
 	def login_clicked(self):
-		if not self.new_window:
-			self.new_window = LoginWindow()
-			self.new_window.show()
+		self.new_window = LoginWindow()
+		self.new_window.show()
 
 	def close_app(self):
 		self.app.quit()
