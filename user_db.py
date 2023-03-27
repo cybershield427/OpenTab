@@ -40,5 +40,14 @@ class Database:
 		)
 		return self.cursor.fetchone()
 
+	def check_user(self, username):
+		self.cursor.execute(
+			"""
+			SELECT * FROM users WHERE username=?
+			""",
+			(username,)
+		)
+		return self.cursor.fetchone()
+
 	def close_connection(self):
 		self.connection.close()

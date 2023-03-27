@@ -51,7 +51,7 @@ class Signup(QWidget):
 		v_layout = QVBoxLayout()
 		message_layout = QHBoxLayout()
 		self.message_label = QLabel()
-		self.message_label.setStyleSheet('color: red')
+		# self.message_label.setStyleSheet('color: red')
 		self.message_label.setMaximumWidth(300)
 		self.message_label.setMaximumHeight(60)
 		self.message_label.setWordWrap(True)
@@ -87,6 +87,8 @@ class Signup(QWidget):
 		last_name = self.fields["Last Name"].text()
 		phone_number = self.fields["Phone Number"].text()
 
+		self.message_label.setStyleSheet('color: red')
+
 		# check if any fields are empty
 		if not all((username, password, retype_password, first_name, last_name, phone_number)):
 			self.message_label.setText("Please fill in all fields.")
@@ -108,6 +110,10 @@ class Signup(QWidget):
 		# validate phone number
 		if not re.match(r'^\d{10}$', phone_number):
 			self.message_label.setText("Invalid phone number. Must be 10 digits.")
+			return
+
+		if self.db.check_user(username):
+			self.message_label.setText("Username already exists.")
 			return
 
 		# add the user to the database
