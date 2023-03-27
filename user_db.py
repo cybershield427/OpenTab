@@ -12,19 +12,22 @@ class Database:
 			"""
 			CREATE TABLE IF NOT EXISTS users (
 				username TEXT PRIMARY KEY, 
-				password TEXT
+				password TEXT,
+				firstname TEXT,
+				lastname TEXT,
+				phone TEXT
 			)
 			"""
 		)
 		self.connection.commit()
 
-	def insert_user(self, username, password):
+	def insert_user(self, username, password, firstname, lastname, phone):
 		self.cursor.execute(
 			"""
-			INSERT INTO users (username, password)
-			VALUES (?,?)
+			INSERT INTO users (username, password, firstname, lastname, phone)
+			VALUES (?,?,?,?,?)
 			""",
-			(username, password)
+			(username, password, firstname, lastname, phone)
 		)
 		self.connection.commit()
 

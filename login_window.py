@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QWidget, QLabel, QLineEdit, QHBoxLayout, QVBoxLayout, QPushButton, QApplication
 from user_db import Database
 from table_window import TableWindow
+from signup import Signup
 
 
 class LoginWindow(QWidget):
@@ -12,11 +13,10 @@ class LoginWindow(QWidget):
 		# create a database instance
 		self.db = Database()
 		# create the user table if not exist
-		self.db.create_table()
+		# self.db.create_table()
 
 		username = QLabel("Username:")
 		self.user_edit = QLineEdit()
-		# self.user_edit.textEdited.connect(self.take_input)
 
 		password = QLabel("Password:")
 		self.pass_edit = QLineEdit()
@@ -56,13 +56,18 @@ class LoginWindow(QWidget):
 		cancel_button.clicked.connect(self.close)
 
 		self.table_window = None
+		self.signup = None
 
 	def login(self):
 		username = self.user_edit.text()
 		password = self.pass_edit.text()
 		user = self.db.get_user(username, password)
-		if user:
-			print("Login successful!")
+		if user and username == "admin":
+			self.db.close_connection()
+			self.signup = Signup()
+			self.signup.show()
+			self.hide()
+		elif user:
 			self.db.close_connection()
 			QApplication.closeAllWindows()
 			app = QApplication.instance()
