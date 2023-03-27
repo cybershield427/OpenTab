@@ -123,3 +123,9 @@ class Signup(QWidget):
 				else:
 					self.db.insert_user(username, password, firstname, lastname, phone)
 					self.message_label.setText(f"Signed up correctly for user {username}")
+					self.user_edit.clear()
+					self.pass_edit.clear()
+					self.pass_edit2.clear()
+					self.firstname_edit.clear()
+					self.lastname_edit.clear()
+					self.phone_edit.clear()
