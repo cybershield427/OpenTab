@@ -25,3 +25,39 @@ Kristine Rivera: databases for use and customer (in progress)
 Josh Constantino: Creating mock data (in progress)
 
 Joshua Rio
+
+## For Assignment 3
+
+### Progress
+
+After last time when the frame of the application has been created, there are couple new progresses were made.
+1. The functionality of the Login button (open login window) and cancel button (close the app)
+2. The new window after login button was clicked have been created to take the username and password
+3. create the database to hold the users' information such as username, password, first last name, phone number
+4. The user login credential has been implemented that will check if username, password pair is in the database
+5. The windows after login have been created. If it's admin(manager/owner), it will give the window to sign up for new
+    user (more function such as delete will be added later on). If it's a normal user, then the main window will display.
+6. Sign up window has been implemented which have field to take user input. It will check if the username has been taken
+    and password met the security requirement (length, complexity). If all good, new user will be added into the database.
+    If not, then an error message will be display accordingly.
+
+### Link
+
+Link to the repository
+https://github.com/cybershield427/OpenTab
+
+### Pending
+
+1. The main window after login is still ongoing. It still needs to implement the function of add table, create 
+    new database to hold customer's info etc
+2. more functions for each element such as help, setting etc
+3. ...
+
+### Roles and responsibilities
+
+| Members          | New completion | Current   | Next       |
+|------------------|----------------|-----------|------------|
+| Hangbo Zhang     | Progress 1-6   | Pending 1 | Pending 2  |
+| Kristine Rivera  | -              | -         | -          |
+| Josh Constantino | -              | -         | -          |
+| Joshua Rio       | -              | -         | -          |
