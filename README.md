@@ -40,6 +40,8 @@ After last time when the frame of the application has been created, there are co
 6. Sign up window has been implemented which have field to take user input. It will check if the username has been taken
     and password met the security requirement (length, complexity). If all good, new user will be added into the database.
     If not, then an error message will be display accordingly.
+7. Created restaurant database to hold customer information such as name, credit card number and table number
+8. Created authorized users: waiter1 & waiter2
 
 ### Link
 
@@ -48,16 +50,16 @@ https://github.com/cybershield427/OpenTab
 
 ### Pending
 
-1. The main window after login is still ongoing. It still needs to implement the function of add table, create 
-    new database to hold customer's info etc
+1. The main window after login is still ongoing. It still needs to implement the function of add table, etc
 2. more functions for each element such as help, setting etc
-3. ...
+3. Implement function to assign to tables and create customers
+4. Update table window to indicate unassigned tables from assigned tables
 
 ### Roles and responsibilities
 
 | Members          | New completion | Current   | Next       |
 |------------------|----------------|-----------|------------|
 | Hangbo Zhang     | Progress 1-6   | Pending 1 | Pending 2  |
-| Kristine Rivera  | -              | -         | -          |
+| Kristine Rivera  | Progress 7-8   | Pending 3 | Pending 4  |
 | Josh Constantino | -              | -         | -          |
 | Joshua Rio       | -              | -         | -          |
