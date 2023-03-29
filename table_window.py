@@ -50,7 +50,6 @@ class TableWindow(QMainWindow):
 
 		self.setCentralWidget(central_widget)
 
-
 	def add_table(self):
 		self.statusBar().showMessage("To Add a New Table", 3000)
 

@@ -16,7 +16,7 @@ def check_password(password):
 	number_check = number_regex.search(password)
 	symbol_check = symbol_regex.search(password)
 
-	# Return True if all requirements are met, False otherwise
+	# Return True if all requirements are met, False otherwisepy
 	return length_check and letter_check and number_check and symbol_check
 
 
@@ -40,8 +40,8 @@ class Signup(QWidget):
 		}
 
 		# set the password fields to be in password mode
-		self.fields["Password"].setEchoMode(QLineEdit.Password)
-		self.fields["Retype Password"].setEchoMode(QLineEdit.Password)
+		self.fields["Password"].setEchoMode(QLineEdit.EchoMode.Password)
+		self.fields["Retype Password"].setEchoMode(QLineEdit.EchoMode.Password)
 
 		# create submit and cancel buttons
 		submit_button = QPushButton("Submit")

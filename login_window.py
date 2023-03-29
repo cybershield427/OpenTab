@@ -20,7 +20,7 @@ class LoginWindow(QWidget):
 
 		password = QLabel("Password:")
 		self.pass_edit = QLineEdit()
-		self.pass_edit.setEchoMode(QLineEdit.Password)
+		self.pass_edit.setEchoMode(QLineEdit.EchoMode.Password)
 
 		login_button = QPushButton("Login")
 		cancel_button = QPushButton("Cancel")
