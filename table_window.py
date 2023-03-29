@@ -35,7 +35,7 @@ class TableWindow(QMainWindow):
 		# status bar
 		self.setStatusBar(QStatusBar(self))
 
-		place_holder_button = QPushButton("Place holder")
+		place_holder_button = QPushButton("Assign Table")
 		h_layout = QHBoxLayout()
 		v_layout = QVBoxLayout()
 
