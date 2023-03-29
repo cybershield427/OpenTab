@@ -2,7 +2,7 @@ from PySide6.QtWidgets import QMainWindow, QToolBar, QStatusBar, QPushButton, \
 	QVBoxLayout, QWidget, QSizePolicy, QHBoxLayout
 from PySide6.QtCore import QSize
 from login_window import LoginWindow
-
+from tkinter import messagebox
 
 class MainWindow(QMainWindow):
 	def __init__(self, app):
@@ -23,7 +23,10 @@ class MainWindow(QMainWindow):
 
 		window_menu = menu_bar.addMenu("Window")
 		setting_menu = menu_bar.addMenu("Setting")
+
 		help_menu = menu_bar.addMenu("Help")
+		help_action = help_menu.addAction("Help")
+		help_action.triggered.connect(self.show_help)
 
 		# toolbar
 		toolbar = QToolBar("Toolbar")
@@ -82,3 +85,6 @@ class MainWindow(QMainWindow):
 
 	def add_table(self):
 		self.statusBar().showMessage("To Add a New Table", 3000)
+
+	def show_help(self):
+		messagebox.showinfo("Help", "This is the help message.")
