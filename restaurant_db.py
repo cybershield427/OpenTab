@@ -11,31 +11,32 @@ class Database:
 		self.cursor.execute(
 			"""
 			CREATE TABLE IF NOT EXISTS customers (
-				name TEXT PRIMARY KEY, 
+				table_number TEXT PRIMARY KEY, 
+				customer_name TEXT,
+				phone TEXT,
 				credit_card TEXT,
-				table_number TEXT,
-				phone TEXT
+				attendant TEXT
 			)
 			"""
 		)
 		self.connection.commit()
 
-	def insert_customer(self, name, credit_card, table_number, phone):
+	def insert_customer(self, table_number, customer_name, phone, credit_card, attendant):
 		self.cursor.execute(
 			"""
-			INSERT INTO users (name, credit_card, table_number, phone)
+			INSERT INTO customers (table_number, customer_name, phone, credit_card, attendant)
 			VALUES (?,?,?,?,?)
 			""",
-			(name, credit_card, table_number, phone)
+			(table_number, customer_name, phone, credit_card, attendant)
 		)
 		self.connection.commit()
 
-	def get_customer(self, name):
+	def get_customer(self, table_number):
 		self.cursor.execute(
 			"""
-			SELECT * FROM customers WHERE name = ?
+			SELECT * FROM customers WHERE table_number = ?
 			""",
-			(name)
+			(table_number,)
 		)
 		return self.cursor.fetchone()
 

@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow, QToolBar, QStatusBar, QPushButton, \
 	QVBoxLayout, QWidget, QSizePolicy, QHBoxLayout
 from PySide6.QtCore import QSize
-
+from assigncustomer import Assign
 
 class TableWindow(QMainWindow):
 	def __init__(self, app):
@@ -49,9 +49,10 @@ class TableWindow(QMainWindow):
 		central_widget.setLayout(v_layout)
 
 		self.setCentralWidget(central_widget)
-
+		place_holder_button.clicked.connect(self.add_table)
 	def add_table(self):
-		self.statusBar().showMessage("To Add a New Table", 3000)
+		self.assigncustomer = Assign()
+		self.assigncustomer.show()
 
 	def close_app(self):
 		self.app.quit()
