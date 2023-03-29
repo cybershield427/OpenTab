@@ -22,7 +22,7 @@ Hangbo Zhang: main frame, menu, toolbar, status bar, login window, buttons
 
 Kristine Rivera: databases for use and customer (in progress)
 
-Josh Constantino: Creating mock data (in progress)
+Josh Constantino: Add functionality to settings and help
 
 Joshua Rio
 
@@ -42,6 +42,7 @@ After last time when the frame of the application has been created, there are co
     If not, then an error message will be display accordingly.
 7. Created restaurant database to hold customer information such as name, credit card number and table number
 8. Created authorized users: waiter1 & waiter2
+9. Added functionality to the help button to create a pop up window and give a message.
 
 ### Link
 
@@ -61,5 +62,5 @@ https://github.com/cybershield427/OpenTab
 |------------------|----------------|-----------|------------|
 | Hangbo Zhang     | Progress 1-6   | Pending 1 | Pending 2  |
 | Kristine Rivera  | Progress 7-8   | Pending 3 | Pending 4  |
-| Josh Constantino | -              | -         | -          |
+| Josh Constantino | Progress 9     | Pending 2 | -          |
 | Joshua Rio       | -              | -         | -          |
