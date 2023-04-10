@@ -64,3 +64,26 @@ https://github.com/cybershield427/OpenTab
 | Kristine Rivera  | Progress 7-8   | Pending 3 | Pending 4  |
 | Josh Constantino | Progress 9     | Pending 2 | -          |
 | Joshua Rio       | -              | -         | -          |
+
+
+## For Assignment 4
+
+### Done since Last submit
+
+
+### Pending now
+
+
+### Roles and responsibilities
+
+| Members          | New completion | Current | Next |
+|------------------|----------------|---------|------|
+| Hangbo Zhang     |                |         |      |
+| Kristine Rivera  |                |         |      |
+| Josh Constantino |                |         | -    |
+| Joshua Rio       | -              | -       | -    |
+
+### Link
+
+Link to the repository
+https://github.com/cybershield427/OpenTab

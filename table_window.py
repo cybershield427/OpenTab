@@ -3,6 +3,7 @@ from PySide6.QtWidgets import QMainWindow, QToolBar, QStatusBar, QPushButton, \
 from PySide6.QtCore import QSize
 from assigncustomer import Assign
 
+
 class TableWindow(QMainWindow):
 	def __init__(self, app):
 		super().__init__()
@@ -50,6 +51,7 @@ class TableWindow(QMainWindow):
 
 		self.setCentralWidget(central_widget)
 		place_holder_button.clicked.connect(self.add_table)
+
 	def add_table(self):
 		self.assigncustomer = Assign()
 		self.assigncustomer.show()
