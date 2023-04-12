@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QWidget, QLabel, QLineEdit, QHBoxLayout, QVBoxLayout, QPushButton
 from restaurant_db import Database
 import re
+import sqlite3
 
 table_status = {"1": True, "2": True, "3": True}
 
@@ -80,6 +81,13 @@ class Assign(QWidget):
 		attendant = self.fields["Attendant"].text()
 
 		self.message_label.setStyleSheet('color: red')
+		# check if the table is taken
+		taken = self.taken_tables()
+		for tables in taken:
+			if tables == table_number:
+				self.message_label.setText("This table is taken.")
+				return
+
 
 		# check if any fields are empty
 		if not all((customer_name, phone, credit_card)):
@@ -108,3 +116,38 @@ class Assign(QWidget):
 		self.message_label.setText(f"Signed up correctly for customer {customer_name}")
 		for field in self.fields.values():
 			field.clear()
+
+
+	def taken_tables(self):
+		try:
+			# Making a connection between sqlite3
+			conn = sqlite3.connect('restaurant.db')
+			# Creating cursor object using connection object
+			c = conn.cursor()
+			print("Connected to SQLite")
+
+			# Getting all tables from sqlite_master
+			sql_query = """SELECT * FROM customers"""
+
+			# executing our sql query
+			c.execute(sql_query)
+			records = c.fetchall()
+
+			tables_taken = []
+			for row in records:
+				tables_taken.append(row[0])
+
+			return tables_taken
+		except sqlite3.Error as error:
+			print("Failed to execute the above query", error)
+
+		finally:
+
+			# Inside Finally Block, If connection is
+			# open, we need to close it
+			if conn:
+				# using close() method, we will close
+				# the connection
+				conn.close()
+
+
