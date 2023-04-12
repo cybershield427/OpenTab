@@ -5,6 +5,7 @@ import sys
 from PySide6.QtWidgets import QApplication
 from main_window import MainWindow
 
+
 def trace_lines(frame, event, arg):
     if event != 'line':
         return
@@ -13,6 +14,7 @@ def trace_lines(frame, event, arg):
     line_no = frame.f_lineno
     filename = co.co_filename
     print('  %s line %s' % (func_name, line_no))
+
 
 def trace_calls(frame, event, arg):
     if event != 'call':
@@ -29,6 +31,7 @@ def trace_calls(frame, event, arg):
         # Trace into this function
         return trace_lines
     return
+
 
 TRACE_INTO = ['b']
 

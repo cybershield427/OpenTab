@@ -16,7 +16,7 @@ def check_password(password):
 	number_check = number_regex.search(password)
 	symbol_check = symbol_regex.search(password)
 
-	# Return True if all requirements are met, False otherwisepy
+	# Return True if all requirements are met, False otherwise
 	return length_check and letter_check and number_check and symbol_check
 
 

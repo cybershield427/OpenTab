@@ -50,11 +50,12 @@ class TableWindow(QMainWindow):
 		central_widget.setLayout(v_layout)
 
 		self.setCentralWidget(central_widget)
+		self.assign_customer = None
 		place_holder_button.clicked.connect(self.add_table)
 
 	def add_table(self):
-		self.assigncustomer = Assign()
-		self.assigncustomer.show()
+		self.assign_customer = Assign()
+		self.assign_customer.show()
 
 	def close_app(self):
 		self.app.quit()

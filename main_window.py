@@ -4,6 +4,7 @@ from PySide6.QtCore import QSize
 from login_window import LoginWindow
 from tkinter import messagebox
 
+
 class MainWindow(QMainWindow):
 	def __init__(self, app):
 		super().__init__()

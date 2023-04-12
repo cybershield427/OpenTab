@@ -42,7 +42,7 @@ After last time when the frame of the application has been created, there are co
     If not, then an error message will be display accordingly.
 7. Created restaurant database to hold customer information such as name, credit card number and table number
 8. Created authorized users: waiter1 & waiter2
-9. Added functionality to the help button to create a pop up window and give a message.
+9. Added functionality to the help button to create a pop-up window and give a message.
 
 ### Link
 
@@ -68,8 +68,11 @@ https://github.com/cybershield427/OpenTab
 
 ## For Assignment 4
 
-### Done since Last submit
-
+### Done since Last submit (Progress)
+1. The main window after login with the implement function of add table
+2. have added more functionality into other elements such as help, setting
+3. function to assign to tables and create customer database
+4. fuzz testing
 
 ### Pending now
 

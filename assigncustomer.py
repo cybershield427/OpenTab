@@ -4,6 +4,7 @@ import re
 
 table_status = {"1": True, "2": True, "3": True}
 
+
 def check_credit(credit_card):
 	# Define the regular expressions for each requirement
 	length_regex = re.compile('.{16,}')
@@ -13,7 +14,7 @@ def check_credit(credit_card):
 	length_check = length_regex.search(credit_card)
 	number_check = number_regex.search(credit_card)
 
-	# Return True if all requirements are met, False otherwisepy
+	# Return True if all requirements are met, False otherwise
 	return length_check and number_check
 
 
@@ -99,7 +100,7 @@ class Assign(QWidget):
 		# add the customer to the database
 
 		# create the customer table if not exist
-		#self.db.create_table()
+		# self.db.create_table()
 		self.db.insert_customer(table_number, customer_name, phone, credit_card, attendant)
 
 		# show success message
