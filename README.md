@@ -72,19 +72,25 @@ https://github.com/cybershield427/OpenTab
 1. The main window after login with the implement function of add table
 2. have added more functionality into other elements such as help, setting
 3. function to assign to tables and create customer database
-4. fuzz testing
+4. fuzz testing, SQL injection, DoS, Buffer overflow
+5. static analyze
+6. dynamic analyze
 
 ### Pending now
+1. more testing cases
+2. functionality of all the buttons
+3. better UI
+4. set limitation of user privilege to database
 
 
 ### Roles and responsibilities
 
-| Members          | New completion | Current | Next |
-|------------------|----------------|---------|------|
-| Hangbo Zhang     |                |         |      |
-| Kristine Rivera  |                |         |      |
-| Josh Constantino |                |         | -    |
-| Joshua Rio       | -              | -       | -    |
+| Members          | New completion | Current   | Next         |
+|------------------|----------------|-----------|--------------|
+| Hangbo Zhang     | progress 4,5,6 | pending 1 | pending 4, 3 |
+| Kristine Rivera  | progress 1, 3  | pending 3 | pending 2, 3 |
+| Josh Constantino |                |           | -            |
+| Joshua Rio       | -              | -         | -            |
 
 ### Link
 
