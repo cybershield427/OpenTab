@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
 		super().__init__()
 		self.app = app
 		self.setWindowTitle("OpenTab")
-		self.setMinimumSize(200, 100)
+		self.setMinimumSize(300, 300)
 
 		# Menubar and menus
 		menu_bar = self.menuBar()

@@ -95,4 +95,53 @@ https://github.com/cybershield427/OpenTab
 ### Link
 
 Link to the repository
+
 https://github.com/cybershield427/OpenTab
+
+## For Assignment 5
+
+
+| Members          | New completion                                                                                      |
+|------------------|-----------------------------------------------------------------------------------------------------|
+| Hangbo Zhang     | set limitation of user privilege, penetration tests, test cases, Wiki page, Release the application |
+| Kristine Rivera  | better UI, adding more functionality, test cases                                                    |
+| Josh Constantino | -                                                                                                   |
+| Joshua Rio       | -                                                                                                   |
+
+### Technical notes
+- install Pyside6 by `pip install pyside6` or `pip install -r requirements.txt`
+- With the PySide6 installed in your local machine. You can start the program by running: 
+`python3 main.py`
+- The login window will pop up. You can log in with admin and changeme. 
+From then, you can sign up for all your waiters/waitress.
+- For waiters/waitress, after the sign-up finished by the manager/admin, 
+they can log in with their own username and password.
+- After login, they can add table, assign customer, store or delete customers' information of the tables. 
+However, they will only be able to see the name and orders of the customer not any other information of the customers.
+- After initial login with admin, please make sure to sign up a new manager account and delete the `admin` account 
+as it was default and open to everyone.
+- The 2 database that stores the information of the waiters/waitress and customers are currently created 
+in the local machine. They are also included in the project. You might want to change the name of the database 
+and also maybe stored in somewhere else.
+- There are couple test/default waiters/waitress accounts. You might want to delete them as well.
+
+### Brief thoughts
+- there are a lot of UI libraries available in python, finding an easy to learn and use is not that easy
+- the connection between all the buttons to the actions and between windows to windows 
+are at first was hard to establish.
+- UI design is definitely another very different field. Our application's UI is very basic.
+- able to create the database, set different constrains and communicate with the database from our application
+was a great achievements.
+
+
+### Link to Repository
+https://github.com/cybershield427/OpenTab
+
+### Link to Final Report
+https://github.com/cybershield427/OpenTab/blob/main/ICS427-Final-Report.pdf
+
+### Link to Release Version
+https://github.com/cybershield427/OpenTab/releases/tag/v1.0.0
+
+### Link to Wiki Page
+https://github.com/cybershield427/OpenTab/wiki

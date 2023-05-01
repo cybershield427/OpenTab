@@ -88,7 +88,6 @@ class Assign(QWidget):
 				self.message_label.setText("This table is taken.")
 				return
 
-
 		# check if any fields are empty
 		if not all((customer_name, phone, credit_card)):
 			self.message_label.setText("Please fill in all fields.")
